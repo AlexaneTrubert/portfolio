@@ -1,0 +1,65 @@
+/*-----------------------------------*\
+  #style.css
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+
+    /**
+     * colors
+     */
+
+    /* gradient */
+    --linear-black: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.601863) 100%);
+    --linear-white: linear-gradient(
+            to top,
+            hsl(0, 0%, 100%) 100%,
+            hsl(0, 0%, 100%) 60.19%
+    );
+
+    /* solid */
+
+
+    /**
+     * typography
+     */
+
+    /* font-family */
+
+
+    /* font-size */
+    --fs-1: 7.2rem;
+    --fs-2: 4.8rem;
+    --fs-3: 4rem;
+    --fs-4: 3.2rem;
+    --fs-5: 2.4rem;
+    --fs-7: 1.5rem;
+
+    /* font-weight */
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+
+    /**
+     * shadow
+     */
+
+
+    /**
+     * transition
+     */
+
+    /**
+    * Utilisation
+     */
+    --txt: ;
+    --title: ;
+    --bg: ;
+    --px: ;
+    --mb: ;
+
+}
