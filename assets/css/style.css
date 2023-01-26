@@ -6,6 +6,76 @@
   #CUSTOM PROPERTY
 \*-----------------------------------*/
 
+/**
+* Font Family
+ */
+
+/* ibarra-real-nova-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Ibarra Real Nova';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+    url('../fonts/ibarra-real-nova-v6-latin-regular.woff2') format('woff2'),
+    url('../fonts/ibarra-real-nova-v6-latin-regular.woff') format('woff');
+}
+
+/* ibarra-real-nova-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Ibarra Real Nova';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+    url('../fonts/ibarra-real-nova-v6-latin-700.woff2') format('woff2'),
+    url('../fonts/ibarra-real-nova-v6-latin-700.woff') format('woff');
+}
+
+/* public-sans-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+    url('../fonts/public-sans-v5-latin-regular.woff2') format('woff2'),
+    url('../fonts/public-sans-v5-latin-regular.woff') format('woff');
+}
+
+/* public-sans-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+    url('../fonts/public-sans-v5-latin-700.woff2') format('woff2'),
+    url('../fonts/public-sans-v5-latin-700.woff') format('woff');
+}
+
+/* public-sans-italic - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Public Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: local(''),
+    url('../fonts/public-sans-v5-latin-italic.woff2') format('woff2'),
+    url('../fonts/public-sans-v5-latin-italic.woff') format('woff');
+}
+
+/* public-sans-700italic - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Public Sans';
+    font-style: italic;
+    font-weight: 700;
+    src: local(''),
+    url('../fonts/public-sans-v5-latin-700italic.woff2') format('woff2'),
+    url('../fonts/public-sans-v5-latin-700italic.woff') format('woff');
+}
+
 :root {
 
     /**
@@ -21,14 +91,17 @@
     );
 
     /* solid */
+    --primary: #5fb4a2;
+    --secondary: #203A4c;
+    --grey-dark: #33323d;
+    --grey-light: #eaeaeb;
+    --grey-lighter: #fafafa;
+    --errors: #f43030;
 
 
     /**
      * typography
      */
-
-    /* font-family */
-
 
     /* font-size */
     --fs-1: 7.2rem;
@@ -56,10 +129,52 @@
     /**
     * Utilisation
      */
-    --txt: ;
+    --txt: var(--grey-dark);
     --title: ;
     --bg: ;
     --px: ;
-    --mb: ;
+    --mb: 3.2rem;
 
 }
+
+:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 1rem;
+}
+
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 119rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-inline: var(--mb);
+}
+
+/*-----------------------------------*\
+  #Media Queries
+\*-----------------------------------*/
+
+@media screen and (min-width : 36em) {
+
+}
+
+@media screen and (min-width : 41em) {
+    .container {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+@media screen and (min-width : 60em) {
+
+}
+
+@media screen and (min-width : 75em) {
+
+}
+
+
