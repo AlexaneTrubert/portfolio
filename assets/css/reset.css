@@ -37,8 +37,10 @@ html:focus-within {
 /* Set core body defaults */
 body {
   min-height: 100vh;
+  font-size: 1.6rem;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  color: #000;
 }
 
 /* A elements that don't have a class get default styles */
