@@ -89,9 +89,9 @@ projects = [
         background: "This project was a front-end challenge from CEFIM BootCamp. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
         preview: [
             {
-                mobile: 'assets/images/detail/mobile/image-fylo-preview-1',
-                tablet: 'assets/images/detail/tablet/image-fylo-preview-1',
-                desktop: 'assets/images/detail/desktop/image-fylo-preview-1'
+                mobile: 'assets/images/detail/mobile/image-fylo-preview-1.jpg',
+                tablet: 'assets/images/detail/tablet/image-fylo-preview-1.jpg',
+                desktop: 'assets/images/detail/desktop/image-fylo-preview-1.jpg'
             }
         ]
     },
