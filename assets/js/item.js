@@ -10,8 +10,11 @@ projects = [
             }
         ],
         desc: "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
-        cat: [
-            'Interaction Design', 'Front End Development', 'HTML / CSS / JS'
+        cats: [
+            'Interaction Design', 'Front End Development'
+        ],
+        langages: [
+            'HTML', 'CSS', 'JS'
         ],
         url: '#',
         background: "This project was a front-end challenge from CEFIM BootCamp. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
@@ -34,8 +37,11 @@ projects = [
             }
         ],
         desc: "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.",
-        cat: [
+        cats: [
             'Interaction Design', 'Front End Development', 'HTML / CSS / JS'
+        ],
+        langages: [
+            'HTML', 'CSS', 'JS'
         ],
         url:'#',
         background: "This project was a front-end challenge from CEFIM BootCamp. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
@@ -58,8 +64,11 @@ projects = [
             }
         ],
         desc: "This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.",
-        cat: [
+        cats: [
             'Interaction Design', 'Front End Development', 'HTML / CSS / JS'
+        ],
+        langages: [
+            'HTML', 'CSS', 'JS'
         ],
         url: '#',
         background: "This project was a front-end challenge from CEFIM BootCamp. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
@@ -82,8 +91,11 @@ projects = [
             }
         ],
         desc: "This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.",
-        cat: [
+        cats: [
             'Interaction Design', 'Front End Development', 'HTML / CSS / JS'
+        ],
+        langages: [
+            'HTML', 'CSS', 'JS'
         ],
         url:'#',
         background: "This project was a front-end challenge from CEFIM BootCamp. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
@@ -138,9 +150,22 @@ function detailProject() {
             projectCatList = document.createElement("ul");
             projectCatList.className = "project-cat-list";
 
-            projectCatItem = document.createElement("li");
-            projectCatItem.className = "project-cat-item";
-            projectCatItem.textContent = projects[i].cat;
+            projects[i].cats.forEach((cat) => {
+                var li = document.createElement("li");
+                projectCatList.appendChild(li);
+                li.className = "project-cat-item";
+                li.innerHTML += cat;
+            });
+
+            projectLanguageList = document.createElement("ul");
+            projectLanguageList.className = "project-lang-list";
+
+            projects[i].langages.forEach((lang) => {
+                var li = document.createElement("li");
+                projectLanguageList.appendChild(li);
+                li.className = "project-lang-item";
+                li.innerHTML += lang;
+            });
 
             projectWebsite = document.createElement("a");
             projectWebsite.className = "btn-secondary";
@@ -179,7 +204,7 @@ function detailProject() {
             projectSummary.appendChild(projectTitle);
             projectSummary.appendChild(projectDesc);
             projectSummary.appendChild(projectCatList);
-            projectCatList.appendChild(projectCatItem);
+            projectSummary.appendChild(projectLanguageList);
             projectSummary.appendChild(projectWebsite);
             projectCard.appendChild(projectBackground);
             projectBackground.appendChild(projectBackgroundTitle);
