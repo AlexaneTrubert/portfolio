@@ -4,8 +4,6 @@
 
 </section>
 
-
-
 <?php include "contact-footer.html" ?>
 
 <script src="assets/js/item.js"></script>
