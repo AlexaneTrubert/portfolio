@@ -248,6 +248,19 @@ p {
     margin-bottom: 1rem;
 }
 
+ul.inline {
+    display: flex;
+}
+
+ul.inline li + li::before {
+    content: " / ";
+    margin-inline: 8px;
+}
+
+.cat {
+    color: var(--cyan);
+}
+
 /*-----------------------------------*\
   #Main Nav
 \*-----------------------------------*/
@@ -455,6 +468,10 @@ h2.portfolio-title {
     border-bottom: .1rem solid rgba(51, 50, 61, .15);
 }
 
+.item-preview-img {
+    margin-top: 3rem;
+}
+
 /*-----------------------------------*\
   #Media Queries
 \*-----------------------------------*/
@@ -656,6 +673,27 @@ h2.portfolio-title {
 }
 
 @media screen and (min-width: 60em) {
+    /*
+    * Page item projet
+     */
+
+    .item-container {
+        column-gap: 12rem;
+    }
+
+    .item-summary {
+        grid-column: 1;
+        display: flex;
+        gap: 3rem;
+    }
+
+    .item-background {
+        grid-column: 2;
+    }
+
+    .item-preview {
+        grid-column: 2;
+    }
 
 }
 

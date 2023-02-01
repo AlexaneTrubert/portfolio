@@ -23,6 +23,11 @@ projects = [
                 mobile: 'assets/images/detail/mobile/image-manage-preview-1.jpg',
                 tablet: 'assets/images/detail/tablet/image-manage-preview-1.jpg',
                 desktop: 'assets/images/detail/desktop/image-manage-preview-1.jpg'
+            },
+            {
+                mobile: 'assets/images/detail/mobile/image-manage-preview-2.jpg',
+                tablet: 'assets/images/detail/tablet/image-manage-preview-2.jpg',
+                desktop: 'assets/images/detail/desktop/image-manage-preview-2.jpg'
             }
         ]
     },
@@ -50,6 +55,11 @@ projects = [
                 mobile: 'assets/images/detail/mobile/image-bookmark-preview-1.jpg',
                 tablet: 'assets/images/detail/tablet/image-bookmark-preview-1.jpg',
                 desktop: 'assets/images/detail/desktop/image-bookmark-preview-1.jpg'
+            },
+            {
+                mobile: 'assets/images/detail/mobile/image-bookmark-preview-2.jpg',
+                tablet: 'assets/images/detail/tablet/image-bookmark-preview-2.jpg',
+                desktop: 'assets/images/detail/desktop/image-bookmark-preview-2.jpg'
             }
         ]
     },
@@ -77,6 +87,11 @@ projects = [
                 mobile: 'assets/images/detail/mobile/image-insure-preview-1.jpg',
                 tablet: 'assets/images/detail/tablet/image-insure-preview-1.jpg',
                 desktop: 'assets/images/detail/desktop/image-insure-preview-1.jpg'
+            },
+            {
+                mobile: 'assets/images/detail/mobile/image-insure-preview-2.jpg',
+                tablet: 'assets/images/detail/tablet/image-insure-preview-2.jpg',
+                desktop: 'assets/images/detail/desktop/image-insure-preview-2.jpg'
             }
         ]
     },
@@ -104,6 +119,11 @@ projects = [
                 mobile: 'assets/images/detail/mobile/image-fylo-preview-1.jpg',
                 tablet: 'assets/images/detail/tablet/image-fylo-preview-1.jpg',
                 desktop: 'assets/images/detail/desktop/image-fylo-preview-1.jpg'
+            },
+            {
+                mobile: 'assets/images/detail/mobile/image-fylo-preview-2.jpg',
+                tablet: 'assets/images/detail/tablet/image-fylo-preview-2.jpg',
+                desktop: 'assets/images/detail/desktop/image-fylo-preview-2.jpg'
             }
         ]
     },
@@ -148,22 +168,22 @@ function detailProject() {
             projectDesc.textContent = projects[i].desc;
 
             projectCatList = document.createElement("ul");
-            projectCatList.className = "project-cat-list";
+            projectCatList.className = "project-cat-list inline";
 
             projects[i].cats.forEach((cat) => {
                 var li = document.createElement("li");
                 projectCatList.appendChild(li);
-                li.className = "project-cat-item";
+                li.className = "project-cat-item cat";
                 li.innerHTML += cat;
             });
 
             projectLanguageList = document.createElement("ul");
-            projectLanguageList.className = "project-lang-list";
+            projectLanguageList.className = "project-lang-list inline";
 
             projects[i].langages.forEach((lang) => {
                 var li = document.createElement("li");
                 projectLanguageList.appendChild(li);
-                li.className = "project-lang-item";
+                li.className = "project-lang-item cat";
                 li.innerHTML += lang;
             });
 
@@ -193,11 +213,6 @@ function detailProject() {
             projectPreviewTitle.className = "item-preview-title";
             projectPreviewTitle.innerText = "Static Previews";
 
-            projectPreviewImg = document.createElement("img");
-            projectPreviewImg.className = "item-preview-img";
-            projectPreviewImg.setAttribute('alt', '');
-            projectPreviewImg.setAttribute('src', 'http://cefim.tld/html-css/portfolio/' + projects[i]['preview'][0]['desktop']);
-
             // On charge le tout
             projectCard.prepend(projectHero);
             projectCard.appendChild(projectSummary);
@@ -211,7 +226,15 @@ function detailProject() {
             projectBackground.appendChild(projectBackgroundContent);
             projectCard.appendChild(projectPreview);
             projectPreview.appendChild(projectPreviewTitle);
-            projectPreview.appendChild(projectPreviewImg);
+
+            projects[i].preview.forEach((img) =>{
+                var image = document.createElement("img");
+                projectPreview.appendChild(image);
+                image.className = "item-preview-img";
+                image.setAttribute('alt', '');
+                image.setAttribute('src', 'http://cefim.tld/html-css/portfolio/' + img['desktop']);
+            });
+/*            projectPreview.appendChild(projectPreviewImg);*/
             element[0].appendChild(projectCard);
         }
     }
