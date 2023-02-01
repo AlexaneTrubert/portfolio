@@ -72,7 +72,7 @@ function listProjects() {
         projectLink = document.createElement("a");
         projectLink.className = "btn-secondary";
         projectLink.innerText = "View project";
-        projectLink.setAttribute('href', 'http://cefim.tld/html-css/portfolio/project.php?q=' +projects[i].titre);
+        projectLink.setAttribute('href', 'http://127.0.0.9/project.php?q=' +projects[i].titre);
         projectLink.setAttribute('alt', "");
 
         // On affiche la description du projet
@@ -82,7 +82,7 @@ function listProjects() {
         // On récupère les images en picture
         projectImg = document.createElement("img");
         projectImg.className = "portfolio-img";
-        projectImg.setAttribute('src', 'http://cefim.tld/html-css/portfolio/' + projects[i]['image'][0]['desktop']);
+        projectImg.setAttribute('src', 'http://127.0.0.9/' + projects[i]['image'][0]['desktop']);
         projectImg.setAttribute('alt', '');
 
         // On créé une div pour y mettre les différents textes / liens

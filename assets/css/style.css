@@ -679,20 +679,24 @@ h2.portfolio-title {
 
     .item-container {
         column-gap: 12rem;
+        grid-template-rows: auto;
     }
 
     .item-summary {
         grid-column: 1;
         display: flex;
-        gap: 3rem;
+        gap: 1rem;
+        grid-row: 2 / 4;
     }
 
     .item-background {
         grid-column: 2;
+        grid-row: 2 / 3;
     }
 
     .item-preview {
         grid-column: 2;
+        grid-row: 3 / 4;
     }
 
 }

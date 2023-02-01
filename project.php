@@ -6,5 +6,5 @@
 
 <?php include "contact-footer.html" ?>
 
-<script src="assets/js/item.js"></script>
+<script src="assets/js/item.js" type="application/javascript"></script>
 <?php include 'footer.html' ?>

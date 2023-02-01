@@ -43,7 +43,7 @@ projects = [
         ],
         desc: "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.",
         cats: [
-            'Interaction Design', 'Front End Development', 'HTML / CSS / JS'
+            'Interaction Design', 'Front End Development'
         ],
         langages: [
             'HTML', 'CSS', 'JS'
@@ -75,7 +75,7 @@ projects = [
         ],
         desc: "This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.",
         cats: [
-            'Interaction Design', 'Front End Development', 'HTML / CSS / JS'
+            'Interaction Design', 'Front End Development'
         ],
         langages: [
             'HTML', 'CSS', 'JS'
@@ -107,7 +107,7 @@ projects = [
         ],
         desc: "This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.",
         cats: [
-            'Interaction Design', 'Front End Development', 'HTML / CSS / JS'
+            'Interaction Design', 'Front End Development'
         ],
         langages: [
             'HTML', 'CSS', 'JS'
@@ -152,7 +152,7 @@ function detailProject() {
             // On récupère l'image du projet à mettre dans le hero
             projectHero = document.createElement("img");
             projectHero.className = "item-hero-img";
-            projectHero.setAttribute('src', 'http://cefim.tld/html-css/portfolio/' + projects[i]['image'][0]['desktop']);
+            projectHero.setAttribute('src', 'http://127.0.0.9/' + projects[i]['image'][0]['desktop']);
             projectHero.setAttribute('alt', '');
 
             // On créé une div pour le contenu partie gauche
@@ -232,7 +232,7 @@ function detailProject() {
                 projectPreview.appendChild(image);
                 image.className = "item-preview-img";
                 image.setAttribute('alt', '');
-                image.setAttribute('src', 'http://cefim.tld/html-css/portfolio/' + img['desktop']);
+                image.setAttribute('src', 'http://127.0.0.9/' + img['desktop']);
             });
 /*            projectPreview.appendChild(projectPreviewImg);*/
             element[0].appendChild(projectCard);
