@@ -160,9 +160,22 @@ article,
 h1,
 h2 {
     font-family: 'Ibarra Real Nova', sans-serif;
-    font-size: 4rem;
     line-height: 4.2rem;
+    margin-bottom: 2rem;
+}
+
+h1,
+.h1-like {
+    font-size: 4rem;
     letter-spacing: -0.36px;
+    color: #000000;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 3.2rem;
+    letter-spacing: -0.29px;
+    font-weight: 400;
 }
 
 .hidden {
@@ -212,7 +225,6 @@ h2 {
 
 :focus {
     outline: 2px solid var(--cyan);
-    outline-offset: 1rem;
 }
 
 .btn-secondary {
@@ -238,6 +250,24 @@ h2 {
     color: var(--white);
 }
 
+.btn-contact {
+    display: inline-block;
+    min-width: 15rem;
+    font-family: "Public Sans", sans-serif;
+    padding: 1.7rem 3.4rem;
+    font-size: 1.2rem;
+    line-height: 1.14;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: .2rem;
+    color: var(--white);
+    background-color: var(--dark-blue);
+    transition: .3s;
+    border: 1px solid var(--grey-dark);
+    margin-bottom: 9rem;
+}
+
 hr {
     background-color: var(--grey-dark);
     opacity: 0.15;
@@ -246,6 +276,8 @@ hr {
 
 p {
     margin-bottom: 1rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
 }
 
 ul.inline {
@@ -259,6 +291,38 @@ ul.inline li + li::before {
 
 .cat {
     color: var(--cyan);
+}
+
+/*
+formulaires
+ */
+label {
+    font-size: 1.3rem;
+    color: rgba(51, 50, 61, .8);
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 1.6rem;
+    font-size: 1.3rem;
+    background-color: rgba(51,50,61, .1);
+    border: 0;
+}
+
+::placeholder {
+    opacity: 0.4;
+}
+
+.field {
+    margin-bottom: 3rem;
 }
 
 /*-----------------------------------*\
@@ -444,11 +508,6 @@ img.portfolio-img {
     padding-bottom: 3.2rem;
 }
 
-h2.portfolio-title {
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-}
-
 /*--------------------------------------------------------------------------------------*\
   # PAGE D'UN PROJET
 \*--------------------------------------------------------------------------------------*/
@@ -535,6 +594,25 @@ nav.pagination {
     right: 0;
     background-image: url(../images/icons/arrow-right.svg);
 }
+
+/*--------------------------------------------------------------------------------------*\
+  # CONTACT PAGE
+\*--------------------------------------------------------------------------------------*/
+
+    .contactpage-container {
+        border-top: .1rem solid rgba(51, 50, 61, .15);
+        padding-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .contactRS-list {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .contactRS-list {
+        margin-top: 2rem;
+    }
 
 /*-----------------------------------*\
   #Media Queries
@@ -736,7 +814,6 @@ nav.pagination {
     nav.pagination {
         margin-top: 8rem;
     }
-
 }
 
 @media screen and (min-width: 60em) {
@@ -768,6 +845,28 @@ nav.pagination {
 
     nav.pagination {
         margin-top: 6.4rem;
+    }
+
+    /*
+    * Page contact
+     */
+    .contactpage-container {
+        display: grid;
+        column-gap: 12rem;
+        padding-top: 5rem;
+        grid-template-columns: 392px auto;
+    }
+
+    .contact-container p {
+        grid-column: 2;
+    }
+
+    .contactRS-list {
+        grid-column: 2;
+    }
+
+    .contact-form {
+        grid-column: 2;
     }
 
 }

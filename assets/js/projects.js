@@ -65,7 +65,7 @@ function listProjects() {
 
         // On récupère le titre du projet
         projectTitle = document.createElement("h2");
-        projectTitle.className = "portfolio-title";
+        projectTitle.className = "portfolio-title h1-like";
         projectTitle.textContent = projects[i].titre;
 
         // On récupère le lien vers le projet
