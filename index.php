@@ -20,7 +20,7 @@
 <section class="about">
     <div class="container about-container" id="about">
         <div class="about-content">
-            <h2 class="about-title">About me</h2>
+            <h2 class="about-title h1-like">About me</h2>
             <p class="about-text">I’m a junior front-end developer looking for a new role in an exciting company. I
                 focus on writing accessible HTML, using modern CSS practices and writing clean JavaScript. When writing
                 JavaScript code, I mostly use React, but I can adapt to whatever tools are required. I’m based in
