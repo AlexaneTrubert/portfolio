@@ -1,7 +1,7 @@
 <?php include 'header.html' ?>
 
 <section class="portfolio">
-    <h1 class="hidden">Portfolio</h1>
+    <h1 class="screen-reader-text">Portfolio</h1>
 
 </section>
 

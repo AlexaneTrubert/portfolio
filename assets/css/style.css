@@ -472,6 +472,70 @@ h2.portfolio-title {
     margin-top: 3rem;
 }
 
+/*
+* Pagination
+ */
+
+nav.pagination {
+    margin-top: 6.5rem;
+}
+
+.pagination-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .1rem;
+    padding-top: 0.1rem !important;
+    padding-bottom: 0.1rem !important;
+    background-color: rgba(51, 50, 61, .15);
+}
+
+.pagination-list li {
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+    background-color: #fff;
+}
+
+.pagination-list a {
+    display: block;
+    position: relative;
+    padding-top: 3.8rem;
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 3.2rem;
+    line-height: 1;
+    text-decoration: none;
+    color: #000000;
+}
+
+.pagination-list li:last-child a {
+    text-align: right;
+}
+
+.pagination-list span {
+    display: block;
+    font-family: 'Public sans', sans-serif;
+    font-size: 1.6rem;
+    opacity: 0.5;
+    color: rgba(51, 50, 61, .5);
+}
+
+.pagination-list a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 1rem;
+    height: 1.6rem;
+}
+
+.pagination-list li:first-child a::before {
+    left: 0;
+    background-image: url(../images/icons/arrow-left.svg);
+}
+
+.pagination-list li:last-child a::before {
+    right: 0;
+    background-image: url(../images/icons/arrow-right.svg);
+}
+
 /*-----------------------------------*\
   #Media Queries
 \*-----------------------------------*/
@@ -669,6 +733,9 @@ h2.portfolio-title {
         grid-column: 1 / -1;
     }
 
+    nav.pagination {
+        margin-top: 8rem;
+    }
 
 }
 
@@ -697,6 +764,10 @@ h2.portfolio-title {
     .item-preview {
         grid-column: 2;
         grid-row: 3 / 4;
+    }
+
+    nav.pagination {
+        margin-top: 6.4rem;
     }
 
 }
